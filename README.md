@@ -2,16 +2,17 @@
 
 From the Farm is a community-focused React application designed to help users discover local farms, farmers' markets, seasonal produce, local food, and agricultural events.
 
-Authors
+## Authors
 - Jade Powell
 - Holly Hebert
 - Patrick Gonzalez
 
-- https://fromthefarm-production.up.railway.app
 
 ## Live Application
 
 The current production version is deployed through Railway.
+
+[View From the Farm Live](https://fromthefarm-production.up.railway.app)
 
 ## Features
 
