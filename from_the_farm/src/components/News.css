@@ -1,0 +1,139 @@
+/*
+=========================================================
+SDC445 - Interface Design
+From the Farm
+
+Description:
+Styles for the News page, including local farm updates,
+market announcements, community alerts, and events.
+
+=========================================================
+*/
+
+
+/* =====================================================
+   News Page
+   ===================================================== */
+
+.news-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   News List
+   ===================================================== */
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+/* =====================================================
+   News Items
+   ===================================================== */
+
+.news-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1.15rem;
+
+  overflow: hidden;
+  padding: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow-soft);
+}
+
+
+/* =====================================================
+   News Images
+   ===================================================== */
+
+.news-image {
+  width: 190px;
+  height: 160px;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   News Content
+   ===================================================== */
+
+.news-content {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.news-content h3 {
+  margin: 0.3rem 0 0.5rem;
+
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.news-content > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   News Metadata
+   ===================================================== */
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.8rem;
+
+  color: var(--muted);
+
+  font-size: 0.86rem;
+}
+
+.news-type {
+  padding: 0.25rem 0.5rem;
+
+  border-radius: 999px;
+
+  background: var(--green-soft);
+  color: var(--green-dark);
+
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   Mobile Layout
+   ===================================================== */
+
+@media (max-width: 650px) {
+  .news-item {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image {
+    width: 100%;
+    height: 190px;
+  }
+
+  .news-content {
+    padding: 0 1rem 1rem;
+  }
+}

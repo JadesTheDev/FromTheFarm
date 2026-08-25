@@ -1,0 +1,122 @@
+/*
+=========================================================
+SDC445 - Interface Design
+From the Farm
+
+Description:
+Styles for the dropdown navigation menu used throughout
+the From the Farm application.
+
+=========================================================
+*/
+
+
+/* =====================================================
+   Menu Container
+   ===================================================== */
+
+.menu {
+  position: fixed;
+  top: 70px;
+  right: 16px;
+  z-index: 1000;
+
+  width: min(300px, calc(100vw - 32px));
+
+  padding: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+
+  background: #24351f;
+  color: white;
+
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   Menu Title
+   ===================================================== */
+
+.menu-title {
+  margin: 0 0 9px;
+  padding: 4px 6px 9px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+  color: #d4e6c9;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   Menu Button List
+   ===================================================== */
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+/* =====================================================
+   Menu Buttons
+   ===================================================== */
+
+.menu-button {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  gap: 10px;
+
+  padding: 11px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9px;
+
+  background: #39582f;
+  color: white;
+
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #4c7040;
+
+  border-color: rgba(255, 255, 255, 0.32);
+
+  transform: scale(1.025);
+
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.24);
+}
+
+.menu-button:active {
+  background: #304a28;
+
+  transform: scale(0.985);
+}
+
+
+/* =====================================================
+   Mobile Layout
+   ===================================================== */
+
+@media (max-width: 560px) {
+  .menu {
+    top: 60px;
+    right: 8px;
+
+    width: min(285px, calc(100vw - 16px));
+  }
+}

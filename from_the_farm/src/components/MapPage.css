@@ -1,0 +1,286 @@
+/*
+=========================================================
+SDC445 - Interface Design
+From the Farm
+
+Description:
+Styles for the interactive local food map page, including
+search controls, map layout, supplier cards, and responsive
+mobile behavior.
+
+=========================================================
+*/
+
+.map-page {
+  padding: 0 0 1rem;
+}
+
+
+/* =====================================================
+   Page Heading
+   ===================================================== */
+
+.page-heading {
+  margin-bottom: 1.5rem;
+}
+
+.page-heading h2 {
+  margin: 0.15rem 0 0.45rem;
+
+  font-family: var(--font-heading);
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+.page-heading > p:last-child {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+.page-eyebrow {
+  margin: 0;
+
+  color: var(--green);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   Map Search Panel
+   ===================================================== */
+
+.map-search-panel {
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--surface);
+}
+
+.map-search-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.map-search-row label {
+  font-weight: 700;
+}
+
+.map-search-row input {
+  min-width: 0;
+  padding: 0.72rem 0.85rem;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  background: var(--surface);
+  color: var(--text);
+}
+
+
+/* =====================================================
+   Map Category Buttons
+   ===================================================== */
+
+.map-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: 0.8rem;
+}
+
+.map-category-buttons button {
+  padding: 0.45rem 0.7rem;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: var(--green-soft);
+  color: var(--text);
+}
+
+.map-category-buttons button:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.helper-text {
+  margin: 0.75rem 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   Map Layout
+   ===================================================== */
+
+.map-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(280px, 0.75fr);
+  gap: 1.25rem;
+}
+
+.map-canvas {
+  min-height: 520px;
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--green-soft);
+}
+
+.google-map-frame {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  border: 0;
+}
+
+
+/* =====================================================
+   Map Results
+   ===================================================== */
+
+.map-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.map-results h3 {
+  margin: 0 0 0.2rem;
+}
+
+
+/* =====================================================
+   Location Cards
+   ===================================================== */
+
+.location-card {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 0.7rem;
+
+  padding: 0.9rem;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  background: var(--surface);
+}
+
+.location-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+  color: white;
+
+  font-weight: 800;
+}
+
+.location-card h4 {
+  margin: 0.1rem 0 0.3rem;
+}
+
+.location-card p {
+  margin: 0 0 0.4rem;
+
+  color: var(--muted);
+}
+
+.location-card span {
+  color: var(--green);
+
+  font-weight: 700;
+}
+
+.location-type {
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   Map Links and Buttons
+   ===================================================== */
+
+.map-open-link {
+  grid-column: 2;
+
+  margin-top: 0.25rem;
+
+  color: var(--green);
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.map-open-link:hover {
+  text-decoration: underline;
+}
+
+.secondary-button {
+  padding: 0.72rem 0.9rem;
+
+  border: 1px solid var(--green);
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--green);
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   Responsive Layout
+   ===================================================== */
+
+@media (max-width: 850px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-canvas,
+  .google-map-frame {
+    min-height: 390px;
+    height: 390px;
+  }
+}
+
+@media (max-width: 650px) {
+  .map-search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .map-search-row label {
+    margin-bottom: -0.25rem;
+  }
+}
