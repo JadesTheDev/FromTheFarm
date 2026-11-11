@@ -55,3 +55,19 @@ FromTheFarm/
 ├── package.json
 ├── package-lock.json
 └── README.md
+
+```
+
+## SDC310L 1.4 - Working with GitHub
+
+**Student:** Jade Powell (JadPow5144)  
+**Course:** SDC310L - Web Programming I Lab  
+**Assignment:** 1.4 - Working with GitHub
+
+From the Farm is an existing project being continued for this course. This update documents the repository as the starting point for planned PHP and MySQL shopping cart development. The current application remains a React interface; the planned database and cart features have not been implemented yet.
+
+GitHub will be used to organize source files, track changes, and keep a history of development throughout the course. Earlier project contributors remain credited above.
+
+### Assignment evidence
+
+The assignment instructions call for the GitHub Hello World tutorial and screenshots showing repository creation, branch creation, a commit, a pull request, and a merged pull request. A Word document containing those screenshots and the requested repository link must be submitted separately. This README update and its release record do not by themselves demonstrate completion of those steps.
