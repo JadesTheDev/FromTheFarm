@@ -10,9 +10,7 @@ From the Farm is a community-focused React application designed to help users di
 
 ## Live Application
 
-The current production version is deployed through Railway.
-
-[View From the Farm Live](https://fromthefarm-production.up.railway.app)
+[View From the Farm — current interface preview](https://jadesthedev.github.io/FromTheFarm/)\n\nThe GitHub Pages preview includes the original interface and the Week 2 shopping cart page framework. PHP and MySQL run locally through XAMPP; GitHub Pages hosts the interface only.\n\n[Earlier Railway deployment](https://fromthefarm-production.up.railway.app)
 
 ## Features
 
@@ -71,3 +69,7 @@ GitHub will be used to organize source files, track changes, and keep a history 
 ### Assignment evidence
 
 The assignment instructions call for the GitHub Hello World tutorial and screenshots showing repository creation, branch creation, a commit, a pull request, and a merged pull request. A Word document containing those screenshots and the requested repository link must be submitted separately. This README update and its release record do not by themselves demonstrate completion of those steps.
+
+## SDC310L 2.3 - Create the Infrastructure
+
+Retained the original React pages, styling, images, and navigation. Added Shopping Cart to the existing menu, a cart page framework, a PHP entry point and PDO connection file, and a SQL database export (`FromTheFarm.sql`). The current catalog still uses JavaScript data; database integration and working cart operations remain future development. See WEEK2-SETUP.md for local setup.
