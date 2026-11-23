@@ -19,6 +19,7 @@ button functionality, menu visibility, and page content.
 import { useState } from "react";
 import "./App.css";
 
+import ShoppingCart from "./components/ShoppingCart";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Searchbar from "./components/Searchbar";
@@ -304,6 +305,9 @@ function App() {
       // Profile
       // ==========================
 
+      case "cart":
+        return <ShoppingCart onContinueShopping={() => navigateTo("listings")} />;
+
       case "profile":
         return <Profile />;
 
@@ -410,6 +414,7 @@ function App() {
       {isMenuOpen && (
         <Menu
           onHomeClick={handleHomeClick}
+          onCartClick={() => navigateTo("cart")}
           onListingsClick={() => navigateTo("listings")}
           onSuppliersClick={() => navigateTo("suppliers")}
           onMapClick={() => navigateTo("map")}

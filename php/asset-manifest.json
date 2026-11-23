@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.dd1e4465.css",
+    "main.js": "./static/js/main.9dab3f3f.js",
+    "static/media/farm-expands.jpg": "./static/media/farm-expands.b6d4364819df9fe4db39.jpg",
+    "static/media/community-farm.jpg": "./static/media/community-farm.aa934fcf2ec9b78e18ed.jpg",
+    "static/media/farmers-market.jpg": "./static/media/farmers-market.516eb0d0fc98fc91fd47.jpg",
+    "static/media/severe-weather.jpg": "./static/media/severe-weather.2884092feb9e5e08d5b6.jpg",
+    "static/media/bacon.jpg": "./static/media/bacon.b034b497eed9adb2f9c4.jpg",
+    "static/media/spinach.jpg": "./static/media/spinach.2d817364bf2276aee65c.jpg",
+    "static/media/tomatoes.jpg": "./static/media/tomatoes.fa8d74f786bbe5a7571f.jpg",
+    "static/media/eggs.jpg": "./static/media/eggs.0e53178b519fe7c937e7.jpg",
+    "static/media/basil.jpg": "./static/media/basil.b00652939f0d256fc55e.jpg",
+    "static/media/corn.jpg": "./static/media/corn.e39d2c0e366f96270fe7.jpg",
+    "static/media/peaches.jpg": "./static/media/peaches.183b2a82cb19f8875207.jpg",
+    "static/media/john-farmer.jpg": "./static/media/john-farmer.f12e6ec2572f98448d6e.jpg",
+    "static/media/chicken-breast.jpg": "./static/media/chicken-breast.859d109750f76cfffe23.jpg",
+    "static/media/honey.jpg": "./static/media/honey.bebabaee8aa08d9ec7ee.jpg",
+    "static/media/plant-logo.svg": "./static/media/plant-logo.cac9848ed2c2b3571db41c1176c1f22f.svg",
+    "index.html": "./index.html",
+    "main.dd1e4465.css.map": "./static/css/main.dd1e4465.css.map",
+    "main.9dab3f3f.js.map": "./static/js/main.9dab3f3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd1e4465.css",
+    "static/js/main.9dab3f3f.js"
+  ]
+}

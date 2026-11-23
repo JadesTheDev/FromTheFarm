@@ -14,6 +14,7 @@ features throughout the application.
 import "./Menu.css";
 
 function Menu({
+  onCartClick,
   onHomeClick,
   onListingsClick,
   onSuppliersClick,
@@ -26,6 +27,7 @@ function Menu({
   const items = [
     ["🏠", "Home", onHomeClick],
     ["🧺", "Listings", onListingsClick],
+    ["🛒", "Shopping Cart", onCartClick],
     ["🚜", "Suppliers", onSuppliersClick],
     ["🗺️", "Map", onMapClick],
     ["📅", "Seasonal Calendar", onCalendarClick],
