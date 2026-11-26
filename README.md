@@ -73,3 +73,11 @@ The assignment instructions call for the GitHub Hello World tutorial and screens
 ## SDC310L 2.3 - Create the Infrastructure
 
 Retained the original React pages, styling, images, and navigation. Added Shopping Cart to the existing menu, a cart page framework, a PHP entry point and PDO connection file, and a SQL database export (`FromTheFarm.sql`). The current catalog still uses JavaScript data; database integration and working cart operations remain future development. See WEEK2-SETUP.md for local setup.
+
+## SDC310L 3.3 - Adding Database Support
+
+The existing Listings and Shopping Cart now support database-backed product loading, add/update/remove actions, session-specific cart persistence, totals, and simulated checkout through PHP/PDO/MySQL. The original design, images, navigation and contributor credits are retained. The database schema is unchanged, and `FromTheFarm.sql` remains the current structural export.
+
+[Week 3 setup](WEEK3-SETUP.md) · [Validation results](VALIDATION-WEEK3.md)
+
+The GitHub Pages site provides a labelled interactive browser preview. Run `php/index.php` through XAMPP for the actual database version. GitHub Pages cannot run PHP/MySQL.

@@ -19,6 +19,7 @@ button functionality, menu visibility, and page content.
 import { useState } from "react";
 import "./App.css";
 
+import {ShopProvider, ShopStatus, useShop} from "./context/ShopContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
@@ -42,7 +43,8 @@ import plantLogo from "./assets/brand/plant-logo.svg";
 // Main Application Component
 // ==========================
 
-function App() {
+function FarmApp() {
+  const shop = useShop();
 
   // ==========================
   // React State
@@ -109,7 +111,7 @@ function App() {
   // ==========================
 
   function handleSelectProduct(product) {
-    setSelectedProduct(product);
+    setSelectedProduct(shop.products.find(p => p.id === product.id) || product);
     navigateTo("productListing");
   }
 
@@ -431,6 +433,7 @@ function App() {
           ========================== */}
 
       <main className="main-content">
+        <ShopStatus />
         {renderCurrentPage()}
       </main>
 
@@ -459,4 +462,5 @@ function App() {
   );
 }
 
+function App() { return <ShopProvider><FarmApp /></ShopProvider>; }
 export default App;

@@ -15,8 +15,12 @@ Supplier Registry, not the full registry page.
 */
 
 import "./ProductListing.css";
+import CartControls from "./CartControls";
+import {useShop} from "../context/ShopContext";
 
 function ProductListing({ product, onBack }) {
+  const shop = useShop();
+  product = shop.products.find(p => p.id === product?.id) || product;
   if (!product) {
     return (
       <section className="listing-page">
@@ -43,6 +47,8 @@ function ProductListing({ product, onBack }) {
 
       <h2 className="listing-name">{name}</h2>
       <p className="listing-price">Unit Price: {price}</p>
+      <p>{product.description}</p>
+      {shop.products.some(p => p.id === product.id) ? <CartControls product={product} /> : <p>This product is not available in the connected shop.</p>}
 
       <div className="listing-meta">
         <span

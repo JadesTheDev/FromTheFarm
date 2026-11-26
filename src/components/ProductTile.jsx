@@ -17,22 +17,23 @@ carrying it.
 */
 
 import "./ProductTile.css";
+import CartControls from "./CartControls";
+import "./ShoppingCart.css";
 
 function ProductTile({ product, onSelect }) {
   const { name, price, category, availability, supplier, image } = product;
 
   return (
-    <button
-      type="button"
-      className="product-tile"
-      onClick={() => onSelect && onSelect(product)}
-    >
+    <article className="product-tile">
+      <button type="button" className="product-detail-button" aria-label={`View ${name}`} onClick={() => onSelect && onSelect(product)}>
       <div className="product-tile-image">
         <img src={image} alt={name} className="product-tile-photo" />
       </div>
 
+      </button>
       <div className="product-tile-details">
-        <h3 className="product-tile-name">{name}</h3>
+        <h3 className="product-tile-name"><button type="button" className="product-detail-button" onClick={() => onSelect && onSelect(product)}>{name}</button></h3>
+        <p>{product.description}</p>
         <p className="product-tile-price">{price}</p>
 
         <div className="product-tile-meta">
@@ -49,8 +50,9 @@ function ProductTile({ product, onSelect }) {
         </div>
 
         <p className="product-tile-supplier">Supplier: {supplier.name}</p>
+        <CartControls product={product} />
       </div>
-    </button>
+    </article>
   );
 }
 

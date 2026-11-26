@@ -19,12 +19,14 @@ supplier carrying that product.
 
 import { useMemo, useState } from "react";
 import "./ProductCatalog.css";
+import {useShop} from "../context/ShopContext";
 import ProductTile from "./ProductTile";
-import { catalogProducts } from "../data/marketplaceData";
+
 
 export { catalogProducts } from "../data/marketplaceData";
 
 function ProductCatalog({ onSelectProduct }) {
+  const {products: catalogProducts, loading, error} = useShop();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
 
@@ -51,7 +53,7 @@ function ProductCatalog({ onSelectProduct }) {
 
         return matchesCategory && matchesSearch;
       }),
-    [search, category]
+    [search, category, catalogProducts]
   );
 
   return (
@@ -114,7 +116,8 @@ function ProductCatalog({ onSelectProduct }) {
         ))}
       </div>
 
-      {!filtered.length && (
+      {loading && <p>Loading products…</p>}
+      {!loading && !error && !filtered.length && (
         <p className="empty-state">
           No listings match that search yet.
         </p>
